@@ -75,17 +75,15 @@ Validation failed for field with errors: France capital Paris is of The. is a lo
 # API Reference
 
 **`__init__(self, threshold=0.75, on_fail="noop")`**
-<ul>
+
 Initializes a new instance of the Validator class.
 
 **Parameters:**
 - **`threshold`** *(float)*: The minimum score required for a translation to be considered high quality. The score is a float between 0 and 1, where 1 is the highest quality. The default is 0.75.
 - **`on_fail`** *(str, Callable):* The policy to enact when a validator fails. If `str`, must be one of `reask`, `fix`, `filter`, `refrain`, `noop`, `exception` or `fix_reask`. Otherwise, must be a function that is called when the validator fails.
-</ul>
-<br/>
 
 **`__call__(self, value, metadata={}) -> ValidationResult`**
-<ul>
+
 Validates the given `value` using the rules defined in this validator, relying on the `metadata` provided to customize the validation process. This method is automatically invoked by `guard.parse(...)`, ensuring the validation logic is applied to the input data.
 
 Note:
@@ -101,4 +99,3 @@ Note:
     | Key | Type | Description | Default |
     | --- | --- | --- | --- |
     | `translation_source` | String | The original source text that was translated. | N/A |
-</ul>
